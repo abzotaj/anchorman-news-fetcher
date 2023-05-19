@@ -1,0 +1,42 @@
+.ttg-help-page{
+    .ttg-accordion {
+        .ttg-accordion-title-container {
+            &:hover {
+                background-color: transparent;
+            }
+        }
+        .ttg-accordion-content{
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out;
+            height: auto;
+            transform: scaleY(0);
+            transform-origin: top;
+        }
+        &.open {
+            > .ttg-accordion-content {
+                max-height: 100%;
+                transform:scaleY(1);
+            }
+        }
+    }
+    .question-block{
+        @apply border-b-1 border-gray-200 py-2;
+    }
+    .help-question-title{
+        @apply text-lg font-medium text-rose-500 py-2;
+    }
+    .help-subquestion{
+        @apply text-sm font-medium text-gray-800 my-2;
+    }
+    .help-answer{
+        @apply text-sm font-normal text-gray-500 mx-4 my-1 leading-base;
+        
+        p{
+            @apply my-2;
+        }
+
+        a{
+            @apply hover:underline;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.dropdown-container {
+	@apply relative flex flex-1 justify-end;
+
+	.action-container {
+		@apply absolute bg-white text-base z-50 rounded-sm shadow-md py-1 m-0;
+		width: max-content;
+
+		&.left {
+			@apply right-0;
+		}
+
+		&.right {
+			@apply left-0;
+		}
+	}
+
+	.btn div {
+		display: flex;
+		align-items: center;
+	}
+}

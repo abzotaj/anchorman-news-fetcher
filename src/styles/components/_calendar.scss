@@ -1,0 +1,47 @@
+.app-calendar {
+	@apply flex flex-1 flex-col;
+
+	.days-container {
+		@apply flex flex-1 flex-row;
+
+		.day-container {
+			@apply flex flex-1 justify-center w-8;
+
+			span {
+				@apply ttg-text-sm text-gray-800 font-medium;
+			}
+		}
+	}
+
+	.weeks-container {
+		@apply flex flex-1 flex-row;
+
+		.week-container {
+			@apply flex flex-1 w-8 h-8 justify-center items-center;
+
+			span {
+				@apply ttg-text-sm text-gray-800 cursor-pointer;
+			}
+
+			&.selected {
+				@apply bg-rose-500;
+
+				span {
+					@apply text-white;
+				}
+			}
+
+			&.disabled {
+				@apply text-gray-400;
+
+				span {
+					@apply text-gray-400 cursor-not-allowed;
+				}
+			}
+		}
+	}
+
+	.app-dropdown-prefix__single-value {
+		@apply text-center;
+	}
+}

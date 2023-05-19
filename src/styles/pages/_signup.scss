@@ -1,0 +1,8 @@
+.ttg-signup-card {
+	@apply flex flex-1 flex-col justify-center bg-white shadow-md px-10 pt-6 pb-8 rounded-sm;
+	width: 300px;
+
+	@screen sm {
+		width: 448px;
+	}
+}

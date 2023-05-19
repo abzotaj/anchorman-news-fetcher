@@ -1,0 +1,328 @@
+.ttg-account-main-layout {
+	@apply flex flex-1 flex-col max-w-full;
+
+	.ttg-account-main-layout-header {
+		@apply fixed w-full shadow-sm bg-white z-50;
+		.content {
+			@apply flex container mx-auto;
+			height: 64px;
+
+			.logo {
+				@apply flex items-center justify-center w-full md:w-64;
+			}
+
+			.nav {
+				@apply hidden md:flex flex-1 flex-row justify-end items-stretch;
+				height: 64px;
+
+				.nav-item {
+					@apply ttg-text-lg text-rose-500 hover:text-rose-600 font-medium px-4 flex items-center hover:bg-gray-50;
+					height: 64px;
+
+					&.app-icon {
+						@apply font-bold px-6;
+					}
+				}
+			}
+		}
+	}
+
+	.ttg-account-main-layout-content {
+		@apply flex container mx-auto mb-4 mt-18;
+
+		.ttg-account-main-layout-inner-content {
+			@apply flex flex-1 flex-col max-w-full;
+
+			.ttg-account-section {
+				@apply flex flex-1 shadow-sm bg-white p-6 mx-4 mt-4 rounded-sm;
+			}
+
+			#ttg-account-details-form,
+			#ttg-capa-capa-form {
+				width: 100%;
+				@screen lg {
+					width: 70%;
+				}
+			}
+
+			#ttg-change-password-form {
+				width: 100%;
+				@screen lg {
+					width: 70%;
+				}
+			}
+
+			#ttg-addressbook-section {
+				@apply w-full;
+			}
+		}
+	}
+
+	.ttg-account-main-layout-footer {
+		@apply flex items-center justify-center my-4;
+	}
+}
+
+.ttg-account-widget {
+	.ttg-account-info {
+		@apply px-4 py-3 border-gray-100 border-b-1;
+	}
+	.app-icon {
+		@apply pr-2 text-gray-600 ttg-text-2xl;
+	}
+
+	.ttg-account-logout-action {
+		@apply flex items-center px-4 py-2 cursor-pointer hover:bg-gray-50;
+	}
+	.ttg-my-account-action a {
+		@apply flex items-center justify-between px-4 py-2 cursor-pointer hover:bg-gray-50 border-gray-100 border-b-1;
+	}
+}
+
+.ttg-account-sidebar {
+	.ttg-account-info {
+		@apply py-3 border-gray-100 border-b-1;
+	}
+	.ttg-account-logout-action {
+		@apply flex items-center py-3 cursor-pointer;
+
+		.app-icon {
+			@apply pr-2 text-gray-600 ttg-text-2xl;
+		}
+	}
+}
+
+.ttg-account-main-layout-sidebar {
+	@apply flex flex-col py-4 ml-4;
+	min-width: 270px;
+
+	@screen xl {
+		min-width: 270px;
+	}
+
+	.ttg-account-main-layout-sidebar-wrapper {
+		@apply sticky left-0 right-0;
+		top: 88px;
+		min-width: 270px;
+
+		@screen xl {
+			min-width: 270px;
+		}
+
+		.sidebar-item {
+			@apply flex flex-row px-2 py-1 mb-3 items-center cursor-pointer h-10;
+
+			.ttg-sidebar-icon {
+				@apply pr-2 text-gray-400 ttg-text-2xl;
+			}
+
+			.sidebar-image {
+				@apply grayscale pr-2;
+			}
+
+			&.active {
+				@apply bg-white text-red-700 shadow-sm;
+				.ttg-sidebar-icon {
+					@apply text-red-700;
+				}
+				.sidebar-image {
+					@apply grayscale-0;
+				}
+			}
+			&:hover {
+				@apply bg-gray-100;
+
+				.ttg-sidebar-icon {
+					@apply text-gray-800;
+				}
+
+				.sidebar-image {
+					@apply grayscale-0;
+				}
+			}
+		}
+	}
+}
+
+.nav-mobile {
+	@apply flex flex-1 flex-col justify-end border-y-2 border-gray-100;
+
+	.nav-item {
+		@apply my-4 ttg-text-base text-rose-500 font-medium;
+	}
+}
+
+.tools-mobile-view {
+	@apply absolute top-0 opacity-0;
+	transform: translateX(-380px);
+	transition: all 250ms ease-in-out;
+}
+
+.tools-mobile-view.opened {
+	@apply block opacity-100;
+	transform: translateX(0px);
+}
+
+.tools-mobile-view.closed {
+	@apply opacity-0 hidden;
+	transform: translateX(380px);
+}
+
+.sidebar-mobile-view {
+	@apply opacity-0;
+	transform: translateX(-380px);
+	transition: all 250ms ease-in-out;
+}
+
+.sidebar-mobile-view.opened {
+	@apply opacity-100;
+	transform: translateX(0px);
+}
+
+.sidebar-mobile-view.closed {
+	opacity: 0;
+	transform: translateX(-380px);
+}
+
+.ttg-account-tools {
+	.ttg-account-label {
+		@apply text-xs font-medium tracking-wider uppercase text-gray-400 px-4;
+	}
+	.ttg-account-ttg-tools {
+		@apply py-3 border-gray-100 border-b-1;
+	}
+	.ttg-account-wg-tools {
+		@apply py-3;
+	}
+	.ttg-account-tool {
+		@apply px-4 py-2 flex items-center justify-between cursor-pointer hover:bg-gray-50;
+
+		.ttg-tool-title {
+			@apply text-sm font-medium text-gray-800 ml-2;
+			width: 250px;
+		}
+		.app-icon {
+			@apply text-gray-400 ttg-text-xl;
+		}
+	}
+}
+
+/* #region Change password */
+.ttg-password-requirements {
+	@apply absolute bg-white z-50 shadow-md -mt-4 w-64 sm:w-96;
+
+	.ttg-requirements-title {
+		@apply ttg-text-sm font-medium border-b-1 border-gray-100 py-3 px-4;
+	}
+
+	.ttg-password-checklist {
+		@apply py-3 px-4;
+
+		li span {
+			@apply ttg-text-sm font-normal opacity-100 pt-1 text-gray-700;
+		}
+
+		.app-icon {
+			@apply ttg-text-base mr-2;
+		}
+	}
+}
+/* #endregion */
+
+/* #region Addressbook */
+.ttg-addressbook-header {
+	@apply flex flex-row items-center flex-wrap justify-between;
+
+	.btn {
+		@apply mb-6;
+	}
+}
+
+.ttg-addressbook-header-info {
+	@apply flex flex-col mb-6;
+
+	h1 {
+		@apply ttg-text-2xl mb-1;
+	}
+	p {
+		@apply ttg-text-sm text-gray-500;
+	}
+}
+
+.ttg-addressbook-primary {
+	@apply flex flex-col md:flex-row w-full border-gray-200 border-t-1;
+}
+
+.ttg-addressbook-alternate {
+	@apply flex flex-col md:flex-row w-full border-gray-200 border-t-1;
+
+	.ttg-address-information {
+		@apply border-gray-200 border-b-1;
+
+		&:last-of-type {
+			@apply border-0;
+		}
+	}
+}
+
+.ttg-addressbook-label {
+	@apply ttg-text-sm text-gray-500 font-medium flex-initial w-full md:w-1/3 pt-6 md:py-6;
+}
+
+.ttg-address-information {
+	@apply flex flex-1 flex-col sm:flex-row justify-start sm:justify-between py-6;
+
+	p {
+		@apply text-sm text-gray-800 font-normal;
+	}
+}
+
+.ttg-address-actions {
+	@apply flex justify-start md:justify-end md:self-center;
+}
+
+.ttg-address-action {
+	@apply flex items-center justify-around cursor-pointer px-2 py-1 hover:bg-gray-50 relative;
+
+	&:after {
+		@apply block absolute bg-gray-400;
+		content: '';
+		height: 16px;
+		width: 1px;
+		left: calc(99%);
+	}
+
+	&:last-of-type {
+		&:after {
+			@apply w-0;
+		}
+	}
+}
+
+.ttg-no-address-info-section {
+	@apply flex flex-col items-center justify-center p-6;
+
+	.ttg-no-address-p {
+		@apply ttg-text-sm text-gray-800 text-center mt-4;
+	}
+}
+/* #endregion */
+
+/* #region Add address form */
+.ttg-address-form {
+	@apply p-8 bg-white;
+}
+/* #endregion */
+
+/* #region Orders table */
+.orders-main-table {
+	.ttg-table-container {
+		@apply flex flex-col;
+	}
+}
+.ttg-orders-layout {
+	.ttg-account-main-layout-inner-content {
+		@apply overflow-auto;
+	}
+}
+/* #endregion */

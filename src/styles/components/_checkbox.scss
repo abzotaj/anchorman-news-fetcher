@@ -1,0 +1,61 @@
+.app-checkbox-container {
+	@apply block relative cursor-pointer hover:bg-gray-50;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	.checklabel {
+		@apply ttg-text-sm text-gray-500 font-normal mr-2;
+	}
+
+	/* Create a custom checkbox */
+	.checkmark {
+		@apply flex absolute top-0 left-0 w-4 h-4 bg-white border-1 border-gray-300 rounded-default m-auto justify-center items-center content-center;
+		margin-top: 4px;
+
+		.checkmark-icon {
+			@apply hidden ttg-text-sm text-white;
+			padding-left: 1px;
+		}
+	}
+	&.disabled {
+		@apply cursor-not-allowed;
+
+		.checkmark {
+			@apply bg-gray-300;
+		}
+	}
+}
+
+/* Hide the browser's default checkbox */
+.app-checkbox-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/* Show the checkmark when checked */
+.app-checkbox-container input:checked ~ .checkmark {
+	@apply bg-rose-500 border-rose-500;
+
+	.checkmark-icon {
+		@apply block;
+	}
+}
+
+/* Style the checkmark/indicator */
+.app-checkbox-container .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}

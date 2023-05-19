@@ -1,0 +1,213 @@
+body {
+	@apply bg-gray-50 max-w-full overflow-x-hidden;
+}
+
+* {
+	font-family: Montserrat;
+}
+
+#root {
+	@apply max-w-full;
+}
+
+.app-loading-spinner {
+	@apply flex w-full m-auto justify-center items-center content-center;
+}
+
+.ttg-tooltip {
+	@apply text-center px-1 py-0 #{!important};
+	max-width: 300px;
+}
+
+//Typography
+.ttg-text-xs {
+	@apply text-xs leading-xs;
+}
+
+.ttg-text-sm {
+	@apply text-sm leading-sm;
+}
+
+.ttg-text-base {
+	@apply text-base leading-base;
+}
+
+.ttg-itp-pdf {
+	margin-top: 0.6rem;
+}
+.itp-pdf-green {
+	color: #4c9e45;
+}
+.itp-pdf-red {
+	color: #a03123;
+}
+
+.itp-pdf-circle-red {
+	border-radius: 50%;
+	border: 2px solid black;
+	background-color: #a03123;
+}
+
+.itp-pdf-circle-green {
+	border-radius: 50%;
+	border: 2px solid black;
+	background-color: #4c9e45;
+}
+
+.itp-pdf-circle-yellow {
+	border-radius: 50%;
+	border: 2px solid black;
+	background-color: #fdd207;
+}
+
+.itp-pdf-yellow {
+	color: #fdd207;
+}
+
+.itp-pdf-square-red {
+	background-color: rgb(160, 49, 35);
+}
+
+.itp-pdf-square-green {
+	background-color: #4c9e45;
+}
+
+.itp-pdf-square-yellow {
+	background-color: #fdd207;
+}
+.itp-pdf-icon-small {
+	margin-left: 8.5rem;
+}
+.ohs-frame-top-left {
+	width: 15rem;
+	margin-left: 2rem;
+	margin-top: 2rem;
+	position: absolute;
+}
+
+.ohs-frame-top-right {
+	width: 15rem;
+	margin-left: 17rem;
+	margin-top: 2rem;
+	position: absolute;
+}
+
+.ohs-frame-bottom-left {
+	width: 15rem;
+	margin-left: 2rem;
+	margin-top: 17rem;
+	position: absolute;
+}
+
+.ohs-frame-bottom-right {
+	width: 15rem;
+	margin-left: 17rem;
+	margin-top: 17rem;
+	position: absolute;
+}
+
+.ohs-pdf-blue {
+	color: rgba(66, 121, 202, 255);
+}
+.ttg-text-lg {
+	@apply text-lg leading-lg;
+}
+
+.ttg-text-xl {
+	@apply text-xl leading-xl;
+}
+
+.ttg-text-2xl {
+	@apply text-2xl leading-2xl;
+}
+
+.ttg-text-3xl {
+	@apply text-3xl leading-3xl;
+}
+
+.ttg-text-4xl {
+	@apply text-4xl leading-4xl;
+}
+
+.ttg-text-5xl {
+	@apply text-5xl leading-5xl;
+}
+
+.ttg-text-6xl {
+	@apply text-6xl leading-6xl;
+}
+
+.ttg-text-7xl {
+	@apply text-7xl leading-7xl;
+}
+
+.ttg-text-8xl {
+	@apply text-8xl leading-8xl;
+}
+
+//Toasters
+.ttg-toaster {
+	border-radius: 2px !important;
+
+	.ttg-toaster-icon {
+		@apply self-baseline mt-1;
+	}
+
+	.text-success {
+		@apply text-green-500;
+	}
+
+	.text-error {
+		@apply text-red-500;
+	}
+
+	.text-info {
+		@apply text-blue-500;
+	}
+}
+
+.prod {
+	.hide-on-prod {
+		@apply hidden;
+	}
+}
+
+.bottom-modal-container {
+	@apply opacity-0 fixed left-0 right-0 bottom-0;
+	transform: translateX(180px);
+	transition: all 250ms ease-in-out;
+
+	&.ReactModal__Overlay {
+		background-color: transparent !important;
+
+		.ReactModal__Content--after-open {
+			@apply inset-auto rounded-none #{!important};
+		}
+	}
+
+	&.ReactModal__Overlay--after-open {
+		@apply opacity-100;
+		transform: translateY(0px);
+	}
+
+	&.ReactModal__Overlay--before-close {
+		opacity: 0;
+		transform: translateX(180px);
+	}
+
+	.bottom-modal-bar {
+		background-color: #233c64;
+
+		a {
+			@apply underline;
+		}
+	}
+}
+
+a.link {
+	@apply font-semibold;
+
+	&:hover {
+		@apply text-rose-500 underline;
+	}
+}

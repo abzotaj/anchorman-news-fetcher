@@ -1,0 +1,68 @@
+.ttg-signin-form-container {
+	@apply bg-white;
+	width: 300px;
+
+	@screen sm {
+		width: 448px;
+	}
+
+	.ttg-signin-form {
+		@apply w-full shadow-md flex flex-col items-center p-6;
+	}
+}
+
+.ttg-signin-reminder-form-container {
+	@apply bg-white;
+	width: 300px;
+
+	@screen sm {
+		width: 448px;
+	}
+
+	.ttg-signin-reminder-form {
+		@apply w-full shadow-md flex flex-col items-center py-6 px-8;
+	}
+}
+
+.ttg-reset-password-form-container {
+	@apply bg-white;
+	width: 300px;
+
+	@screen sm {
+		width: 448px;
+	}
+
+	.ttg-reset-password-form {
+		@apply w-full shadow-md py-6 px-8;
+	}
+}
+
+.ttg-login-find-assessments-box {
+	@apply shadow-lg my-4;
+	width: 300px;
+
+	@screen sm {
+		width: 448px;
+	}
+}
+
+.ttg-find-assessment-form-container {
+	@apply bg-white;
+	width: 300px;
+
+	@screen sm {
+		width: 448px;
+	}
+
+	#ttg-find-assessment-form {
+		@apply w-full shadow-md flex flex-col items-center px-6 py-8;
+	}
+}
+
+#ttg-find-assessment-error-alert {
+	width: 300px;
+
+	@screen sm {
+		width: 448px;
+	}
+}

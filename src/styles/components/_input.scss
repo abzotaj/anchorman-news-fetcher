@@ -1,0 +1,59 @@
+.app-input {
+	@apply flex appearance-none justify-center items-center px-1 py-0 bg-white outline-none border-1 border-gray-300 ttg-text-sm rounded-none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	height: $input-height;
+	transition: box-shadow 0.1s ease-in-out;
+	width: 100%;
+
+	&.textarea {
+		height: 200px;
+	}
+
+	&:focus {
+		@apply border-gray-500;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px #6b7280;
+	}
+
+	&:disabled {
+		@apply cursor-not-allowed bg-gray-200 text-gray-400;
+	}
+
+	&.error {
+		@apply border-red-300 pr-8;
+
+		&:focus {
+			@apply border-red-600;
+			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px #dc2626;
+		}
+	}
+}
+
+.ttg-input-icon {
+	@apply flex absolute top-0 right-0 items-center mr-2 ttg-text-xl;
+	height: $input-height;
+	&.error {
+		@apply text-red-500;
+	}
+}
+
+.ttg-input-show-hide-action {
+	@apply flex absolute top-0 right-0 items-center mr-8 ttg-text-xs font-medium uppercase cursor-pointer hover:text-gray-700;
+	height: $input-height;
+}
+
+.app-input-label {
+	@apply font-medium ttg-text-sm text-primary mb-1;
+}
+
+.app-input-message {
+	@apply flex ttg-text-sm;
+}
+
+.app-input-error-message {
+	@apply flex ttg-text-sm text-red-500 mt-1;
+}
+
+.app-input-success-message {
+	@apply flex ttg-text-sm text-success;
+}

@@ -1,0 +1,55 @@
+.app-dropdown {
+	@apply cursor-auto;
+	div {
+		border-radius: 0;
+	}
+	&:hover,
+	&:active,
+	&:focus {
+		outline: none;
+	}
+	.cursor-pointer {
+		cursor: pointer;
+		* {
+			cursor: pointer;
+		}
+	}
+}
+
+.app-dropdown-prefix {
+	&__single-value {
+		@apply ttg-text-sm;
+	}
+	&__control {
+		@apply w-full border-gray-300 outline-none shadow-none #{!important};
+		height: $input-height;
+	}
+	&__control:focus,
+	&__control--menu-is-open {
+		@apply border-gray-500 #{!important};
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px #6b7280 !important;
+	}
+	&__container {
+		height: $input-height;
+	}
+	&__option {
+		&--is-focused {
+			@apply bg-gray-50 text-gray-700 cursor-pointer #{!important};
+		}
+		&--is-selected {
+			@apply bg-gray-100 font-medium text-gray-700 #{!important};
+		}
+	}
+	&__input {
+		font-size: 0.875rem !important;
+		line-height: 1.25rem !important;
+	}
+	&__placeholder {
+		@apply text-sm leading-xs #{!important};
+	}
+	&__menu {
+		&.no-options {
+			@apply hidden;
+		}
+	}
+}

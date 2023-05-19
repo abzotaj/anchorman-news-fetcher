@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+@import 'variables';
+@import 'theme';
+@import 'font';
+@import 'animations';
+
+@import 'generic';
+
+@import 'components';
+@import 'layouts';
+@import 'pages';
+
+@import 'react-phone-number-input/style.css';

@@ -1,0 +1,15 @@
+.ttg-public-main-layout {
+	@apply flex flex-col items-center justify-start w-full bg-gray-50;
+
+	.ttg-public-main-layout-header {
+		@apply flex flex-col items-center justify-center;
+	}
+
+	.ttg-public-main-layout-content {
+		@apply flex flex-col items-center justify-center w-full;
+	}
+
+	.ttg-public-main-layout-footer {
+		@apply flex flex-col items-center justify-center mt-8;
+	}
+}

@@ -1,0 +1,20 @@
+.widget-container {
+	@screen md {
+		@apply relative;
+	}
+
+	.widget-label {
+		@apply relative cursor-pointer uppercase;
+	}
+
+	.widget-content {
+		@apply absolute left-auto top-auto bottom-auto right-0 bg-white shadow-lg hidden z-50;
+		border-radius: 2px;
+		min-width: 230px;
+		height: auto;
+
+		&.opened {
+			@apply block;
+		}
+	}
+}
